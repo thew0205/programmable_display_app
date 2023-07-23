@@ -1,6 +1,6 @@
 # Switches Display
 
-<img src="images/1690151289489.png" alt="Project Image" width="1500"/>
+<img src="images/1690151289489.png" alt="Project Image" width="150"/>
 
 ## Description
 
