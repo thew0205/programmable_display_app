@@ -1,7 +1,6 @@
 # Switches Display
 
-
-![Project Image](images/1690151289489.png)
+<img src="images/1690151289489.png" alt="Project Image" width="200"/>
 
 ## Description
 
@@ -15,6 +14,10 @@ This README provides an overview of the application's features, installation ins
 - Send custom text and graphic commands to be displayed on the P10 DMD screen.
 - User-friendly interface for a seamless interaction with the display.
 - Easy integration with other Arduino projects.
+- From the app, you add, insert, change and delete text to be displayed.
+- Also, the font, spacing between letters, scroll direction can be changed.
+
+5. You can also restrict the access to control the display by setting a 4 digit pin.
 
 ## Technologies Used
 
@@ -25,4 +28,5 @@ This README provides an overview of the application's features, installation ins
 
 ## Screenshots
 
-![Project Image](images/1690151289498.png) ![Project Image](images/1690151289508.png) ![Project Image](images/1690151289518.png)
+<img src="images/1690151289498.png" alt="Project Image" width="200"/> <img src="images/1690151289508.png" alt="Project Image" width="200"/> <img src="images/1690151289518.png" alt="Project Image" width="200"/>
+
