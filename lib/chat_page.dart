@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 
 import 'connection_provider.dart';
 import 'core/colors.dart';
@@ -11,21 +10,21 @@ class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
 
   @override
-  _ChatPage createState() => _ChatPage();
+  State createState() => _ChatPage();
 }
 
-class _Message {
+class Message {
   int whom;
   String text;
 
-  _Message(this.whom, this.text);
+  Message(this.whom, this.text);
 }
 
 class _ChatPage extends State<ChatPage> {
   static const clientID = 0;
   String? serverName;
 
-  final String _messageBuffer = '';
+  // final String _messageBuffer = ''; 
 
   final TextEditingController textEditingController = TextEditingController();
   final ScrollController listScrollController = ScrollController();
@@ -48,9 +47,9 @@ class _ChatPage extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     final connectionProvider = context.watch<DisplayConnectionProvider>();
-    final List<Row> list = connectionProvider.messages.map((_message) {
+    final List<Row> list = connectionProvider.messages.map((message) {
       return Row(
-        mainAxisAlignment: _message.whom == clientID
+        mainAxisAlignment: message.whom == clientID
             ? MainAxisAlignment.end
             : MainAxisAlignment.start,
         children: <Widget>[
@@ -59,12 +58,12 @@ class _ChatPage extends State<ChatPage> {
             margin: const EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
             width: 222.0,
             decoration: BoxDecoration(
-                color: _message.whom == clientID ? switchesColor : Colors.grey,
+                color: message.whom == clientID ? switchesColor : Colors.grey,
                 borderRadius: BorderRadius.circular(7.0)),
             child: Text(
                 (text) {
                   return text == '/shrug' ? '¯\\_(ツ)_/¯' : text;
-                }(_message.text.trim()),
+                }(message.text.trim()),
                 style: const TextStyle(color: Colors.white)),
           ),
         ],
@@ -127,11 +126,11 @@ class _ChatPage extends State<ChatPage> {
     // text = text.trim();
     textEditingController.clear();
 
-    if (text.length > 0) {
+    if (text.isNotEmpty) {
       try {
         bool success = await context
             .read<DisplayConnectionProvider>()
-            .sendData(text + "\r\n");
+            .sendData("$text\r\n");
         if (success) {
           Future.delayed(const Duration(milliseconds: 333)).then((_) {
             listScrollController.animateTo(

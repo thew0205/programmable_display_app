@@ -1,4 +1,4 @@
-package com.example.programmable_display_app
+package com.switches.programmable_display_app
 
 import io.flutter.embedding.android.FlutterActivity
 

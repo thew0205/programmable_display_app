@@ -11,7 +11,7 @@ import 'package:top_snackbar_flutter/top_snack_bar.dart';
 import 'bluetooth_device_list_entry.dart';
 import 'core/colors.dart';
 import 'core/constant_widget.dart';
-import 'switches_custom_loading_indicator.dart';
+import 'widget/switches_custom_loading_indicator.dart';
 
 class SelectBondedDevicePage extends StatefulWidget {
   /// If true, on page start there is performed discovery upon the bonded devices.

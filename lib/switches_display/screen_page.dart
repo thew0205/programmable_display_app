@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
@@ -220,7 +221,9 @@ class _SwitchesScreenPageState extends State<SwitchesScreenPage> {
                       temp += ', ';
                     },
                   );
-                  print(temp);
+                  if (kDebugMode) {
+                    print(temp);
+                  }
                   context.read<DisplayConnectionProvider>().sendData(temp);
                   _textTextEditingController.clear();
                 },

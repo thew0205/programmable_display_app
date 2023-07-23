@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../switches_custom_loading_indicator.dart';
+import '../widget/switches_custom_loading_indicator.dart';
 
 const switchesIndicator = Positioned.fill(
   child: ColoredBox(

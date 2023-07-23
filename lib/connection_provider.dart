@@ -2,8 +2,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-import 'dart:typed_data';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
@@ -59,7 +59,9 @@ class SnakeConnectionProvider extends ConnectionProvider {
         }
       }
     } catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
   }
 
@@ -257,7 +259,9 @@ class DisplayConnectionProvider extends ConnectionProvider {
     } else {
       _messageBuffer = incomingData.substring(index + 1);
       final completeIncomingData = incomingData.substring(0, index);
-      print(completeIncomingData);
+      if (kDebugMode) {
+        print(completeIncomingData);
+      }
       final infos = completeIncomingData.split('\r');
       messages = infos.map((message) => Message(1, message.trim())).toList();
     }
@@ -369,7 +373,6 @@ class DroneConnectionProvider extends ConnectionProvider {
       _messageBuffer = incomingData;
     } else {
       _messageBuffer = incomingData.substring(index + 1);
-      final completeIncomingData = incomingData.substring(0, index);
       try {
         sensorData = [DroneSensorInfo.fromString(incomingData)];
       } catch (e) {
@@ -387,7 +390,6 @@ class DroneConnectionProvider extends ConnectionProvider {
 
   @override
   Future<bool> sendData(String text) {
-    // TODO: implement sendData
     throw UnimplementedError();
   }
 }
@@ -397,7 +399,7 @@ abstract class ConnectionProvider extends ChangeNotifier {
   BluetoothConnection? connection;
   StreamSubscription<Uint8List>? _dataStreamSubscription;
   bool _isConnecting = true;
-  bool _isConnected = false;
+  bool isConnected = false;
   Stream<MapEntry<String, bool>>? IsConnectedStream;
   final StreamController<MapEntry<String, bool>> _isConnectedStreamController =
       StreamController<MapEntry<String, bool>>();
@@ -467,12 +469,6 @@ abstract class ConnectionProvider extends ChangeNotifier {
 
   static const isConnectedKey = "isConnected";
   bool get isConnecting => _isConnecting;
-
-  bool get isConnected => _isConnected;
-
-  set isConnected(bool tempIsConnected) {
-    _isConnected = tempIsConnected;
-  }
 
   static const cannotConnectKey = "cannotConnect";
 }

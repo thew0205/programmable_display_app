@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'core/colors.dart';
-import 'core/functions.dart';
+import '../core/colors.dart';
+import '../core/functions.dart';
 
 class SwitchesLoadingIndicator extends StatefulWidget {
   const SwitchesLoadingIndicator({

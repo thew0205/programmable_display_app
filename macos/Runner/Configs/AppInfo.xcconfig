@@ -8,7 +8,7 @@
 PRODUCT_NAME = programmable_display_app
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.programmableDisplayApp
+PRODUCT_BUNDLE_IDENTIFIER = com.switches.programmableDisplayApp
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.switches. All rights reserved.

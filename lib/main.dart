@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/colors.dart';
 import 'core/functions.dart';
 import 'switches_control.dart';
-import 'switches_custom_loading_indicator.dart';
+import 'widget/switches_custom_loading_indicator.dart';
 
 void main() async {
   runApp(const SwitchesControlApp());
