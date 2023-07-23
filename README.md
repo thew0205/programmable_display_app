@@ -1,15 +1,28 @@
-# programmable_display_app
+# Switches Display
 
-An app that is used to program a p10 display powered by arduino micro controller and hc-06 bluetooth module.
 
-## Getting Started
+![Project Image](images/1690151289489.png)
 
-To get started install the apk file in /output folder.
-Bond i
+## Description
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Switches Display is a mobile application developed with Flutter that allows users to control a programmable display via Bluetooth. The display is powered by an Arduino Nano microcontroller and features a P10 DMD display. The mobile app communicates with the display using a Bluetooth HC-06 module, enabling users to send commands and update the content shown on the display wirelessly.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This README provides an overview of the application's features, installation instructions, and usage guidelines.
+
+## Features
+
+- Control the programmable display wirelessly from your mobile device.
+- Send custom text and graphic commands to be displayed on the P10 DMD screen.
+- User-friendly interface for a seamless interaction with the display.
+- Easy integration with other Arduino projects.
+
+## Technologies Used
+
+- Flutter (Mobile app development framework)
+- Arduino Nano (Microcontroller)
+- P10 DMD Display
+- Bluetooth HC-06 Module
+
+## Screenshots
+
+![Project Image](images/1690151289498.png) ![Project Image](images/1690151289508.png) ![Project Image](images/1690151289518.png)
