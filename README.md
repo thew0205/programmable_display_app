@@ -28,5 +28,5 @@ This README provides an overview of the application's features, installation ins
 
 ## Screenshots
 
-<img src="images/1690151289498.png" alt="Project Image" width="200"/> <img src="images/1690151289508.png" alt="Project Image" width="200"/> <img src="images/1690151289518.png)" alt="Project Image" width="200"/>
+<img src="images/1690151289498.png" alt="Project Image" width="200"/> <img src="images/1690151289508.png" alt="Project Image" width="200"/> <img src="images/1690151289518.png" alt="Project Image" width="200"/>
 
