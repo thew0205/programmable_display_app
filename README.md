@@ -1,6 +1,6 @@
 # Switches Display
 
-<img src="images/1690151289489.png" alt="Project Image" width="150"/>
+<img src="images/1690151289489.png" alt="Project Image" width="200"/>
 
 ## Description
 
@@ -28,4 +28,5 @@ This README provides an overview of the application's features, installation ins
 
 ## Screenshots
 
-![Project Image](images/1690151289498.png) ![Project Image](images/1690151289508.png) ![Project Image](images/1690151289518.png)
+<img src="images/1690151289498.png" alt="Project Image" width="200"/> <img src="images/1690151289508.png" alt="Project Image" width="200"/> <img src="images/1690151289518.png)" alt="Project Image" width="200"/>
+
